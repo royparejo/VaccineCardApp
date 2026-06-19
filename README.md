@@ -1,118 +1,66 @@
-# vaccine_card_app
+# VacunApp
 
-A new Flutter project.
+Aplicación móvil hecha con Flutter para consultar, mostrar y gestionar carnets de vacunación digitales.
 
-## Getting Started
+El proyecto nace como una propuesta abierta para explorar una experiencia simple de carnet digital: Carnet por persona, Certificados de vacunación y escaneo de códigos QR.
 
-This project is a starting point for a Flutter application.
+## Características
 
-A few resources to get you started if this is your first Flutter project:
+- Visualización de carnets de vacunación por persona.
+- Carrusel para navegar entre carnets registradas.
+- Pantalla para agregar un nuevo carnet.
+- Vista de certificado de vacunación.
+- Scanner de código QR.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Capturas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Introducción | Carnets | Sin carnets |
+| --- | --- | --- |
+| <img src="raw/ss01.png" width="220"> | <img src="raw/ss02.png" width="220"> | <img src="raw/ss03.png" width="220"> |
 
-# Vaccination App Glossary
+| Certificado | Agregar carnet | Escanear QR | QR válido |
+| --- | --- | --- | --- |
+| <img src="raw/ss0201.png" width="220"> | <img src="raw/ss0202.png" width="220"> | <img src="raw/ss0203.png" width="220"> | <img src="raw/ss020301.png" width="220"> |
 
-## General Terms
+## Tecnologías
 
-| English | Spanish |
-|----------|----------|
-| Vaccination | Vacunación |
-| Immunization | Inmunización |
-| Vaccine | Vacuna |
-| Vaccination Record | Registro de vacunación |
-| Immunization Record | Registro de inmunización |
-| Vaccination Card | Carnet de vacunación |
-| Vaccine Certificate | Certificado de vacunación |
-| Digital Health Pass | Pase de salud digital |
+- Flutter
+- Dart
 
-## Doses
+## Entorno de desarrollo
 
-| English | Spanish |
-|----------|----------|
-| Dose | Dosis |
-| First Dose | Primera dosis |
-| Second Dose | Segunda dosis |
-| Booster Dose | Dosis de refuerzo |
-| Additional Dose | Dosis adicional |
-| Vaccination Schedule | Calendario de vacunación |
+Este proyecto fue creado y probado con:
 
-## Vaccine Information
+| Herramienta | Versión |
+| --- | --- |
+| Flutter | 3.35.4 |
+| Dart | 3.9.2 |
 
-| English | Spanish |
-|----------|----------|
-| Vaccine Name | Nombre de la vacuna |
-| Manufacturer | Fabricante |
-| Batch Number | Número de lote |
-| Lot Number | Número de lote |
-| Administration Date | Fecha de aplicación |
-| Expiration Date | Fecha de vencimiento |
-| Healthcare Provider | Personal de salud |
-| Vaccination Center | Centro de vacunación |
 
-## Vaccination Status
+## Primeros pasos
 
-| English | Spanish |
-|----------|----------|
-| Vaccinated | Vacunado |
-| Fully Vaccinated | Completamente vacunado |
-| Partially Vaccinated | Parcialmente vacunado |
-| Not Vaccinated | No vacunado |
-| Up to Date | Vacunación al día |
-| Vaccination Status | Estado de vacunación |
+Clona el repositorio e instala las dependencias:
 
-## Certificates & Documents
+```bash
+flutter pub get
+```
 
-| English | Spanish |
-|----------|----------|
-| Certificate | Certificado |
-| Digital Certificate | Certificado digital |
-| QR Code | Código QR |
-| Verification | Verificación |
-| Verified Record | Registro verificado |
-| Download Certificate | Descargar certificado |
-| Share Certificate | Compartir certificado |
+Ejecuta la aplicación:
 
-## COVID-19 Related
+```bash
+flutter run
+```
 
-| English | Spanish |
-|----------|----------|
-| COVID-19 Vaccine | Vacuna contra COVID-19 |
-| Coronavirus Vaccine | Vacuna contra el coronavirus |
-| COVID Vaccination Record | Registro de vacunación COVID |
-| COVID Certificate | Certificado COVID |
+## Créditos
 
-## User Interface (UI)
+Diseño de interfaz inspirado y acreditado a **Daniel Alcántara Avalos**.
 
-| English | Spanish |
-|----------|----------|
-| Add Vaccine | Agregar vacuna |
-| Add Dose | Agregar dosis |
-| Edit Vaccine | Editar vacuna |
-| Delete Vaccine | Eliminar vacuna |
-| View Record | Ver registro |
-| Vaccination History | Historial de vacunación |
-| Upcoming Vaccines | Próximas vacunas |
-| Scan QR Code | Escanear código QR |
-| Export PDF | Exportar PDF |
-| Profile | Perfil |
-| Health Information | Información de salud |
-| Settings | Configuración |
-| Notifications | Notificaciones |
-| Search | Buscar |
-| Filter | Filtrar |
-| Sync Data | Sincronizar datos |
+- Dribbble: [daniAlav](https://dribbble.com/daniAlav)
 
-## Recommended Naming
+Desarrollo por **Roy Parejo Estrada**.
 
-For international applications, prefer:
+## Licencia
 
-- **Immunization Record** → Complete vaccination history.
-- **Vaccination Card** → User-facing vaccination card.
-- **Vaccine Certificate** → Official proof of vaccination.
-- **Health Pass** → Digital health pass.
-- **Vaccination Status** → Current vaccination status.
+Este proyecto es público y libre bajo la licencia MIT. Puedes usarlo, estudiarlo, modificarlo y compartirlo respetando los términos de la licencia.
+
+Consulta el archivo [LICENSE](LICENSE) para más detalles.
