@@ -1,5 +1,7 @@
 # VacunApp
 
+[English version](README-EN.md)
+
 Aplicación móvil hecha con Flutter para consultar, mostrar y gestionar carnets de vacunación digitales.
 
 El proyecto nace como una propuesta abierta para explorar una experiencia simple de carnet digital: Carnet por persona, Certificados de vacunación y escaneo de códigos QR.
