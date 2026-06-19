@@ -1,0 +1,58 @@
+name: Flutter Build & Release
+
+on:
+  push:
+    tags:
+      - 'v*'   # Se ejecuta cuando creas un tag como v1.0.0
+
+permissions:
+  contents: write   # 👈 Permite crear releases y subir APKs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Descarga el código
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 2. Configura Java (Gradle necesita JDK 17 en Android moderno)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # 3. Configura Flutter 3.35.4 (stable)
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.35.4'
+          channel: 'stable'
+
+      # 4. Configura Android SDK
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      # 5. Acepta licencias de Android
+      - name: Accept Android Licenses
+        run: yes | sdkmanager --licenses
+
+      # 6. Instala el NDK que pide el proyecto
+      - name: Install required NDK
+        run: sdkmanager "ndk;28.0.12433566"
+
+      # 7. Instala dependencias
+      - name: Flutter pub get
+        run: flutter pub get
+
+      # 8. Compila APK release
+      - name: Build release APK
+        run: flutter build apk --release
+
+      # 9. Publica el APK en GitHub Releases
+      - name: Upload APK to GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/app/outputs/flutter-apk/app-release.apk
